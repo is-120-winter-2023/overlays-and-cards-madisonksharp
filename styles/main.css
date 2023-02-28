@@ -1,0 +1,187 @@
+/*****************************************************/
+/* This semester we will be using my variation of    */
+/* Josh Comeau's CSS Reset instead of normalize      */
+/* Read more at                                      */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/*****************************************************/
+/* Always add your CSS below the reset CSS           */
+/*****************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  /* this an experimental line-height; if it breaks, add line-height: 1.5 to body */
+  line-height: calc(1em + 0.5rem);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* until you get a feel for overflow, I'll keep these next two commented out */
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} */
+
+/* p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+} */
+
+/* temp CSS for HTML only assignments */
+picture img {
+  width: 100%;
+  display: block;
+}
+
+svg {
+  width: 200px;
+}
+
+/* temp fix to size about img */
+img[srcset] {
+  width: 50%;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+}
+
+/* temporary fix to size svg images */
+img[src$="svg"] {
+  width: 200px;
+}
+
+/************ add your CSS here *****************/
+
+:root {
+  --color-background: floralwhite;
+  --color-font: #444; /*dark gray*/
+  --color-primary: #663f46; /* Catawba*/
+  --color-secondary: #b8c4bb; /*Ash gray*/
+  --color-accent: #d4afb9; /*Cameo Pink*/
+  --color-accent-light: #e8f7ee; /*Honeydew*/
+  --color-accent-dark: #294d4a; /*Dark slate gray*/
+}
+header {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+main {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 50rem;
+}
+
+body {
+  color: var(--color-background);
+  font-family: "PT Sans";
+  font-size: 1rem;
+  color: #444;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+}
+
+h1 {
+  font-family: "Alex Brush";
+  font-size: 3rem;
+  color: var(--color-primary);
+}
+h2 {
+  font-family: "Alex Brush";
+  font-size: 2rem;
+  color: var(--color-accent);
+}
+h3 {
+  font-family: "PT Sans";
+  font-size: 1rem;
+  color: var(--color-secondary);
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+article,
+aside {
+  padding: 0 1rem;
+  margin-bottom: 6rem;
+}
+
+/* links and button styles*/
+a {
+  text-decoration: none;
+}
+
+a[href]:link {
+  text-decoration: none;
+}
+
+a[href]:visited {
+  color: var(--color-accent);
+}
+a[href]:hover {
+  color: var(--color-accent-dark);
+}
+.button {
+  display: inline-block;
+  background-color: aliceblue;
+  border: none;
+  color: var(--color-primary);
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 2rem;
+  transition: background-color 300ms ease;
+}
+.button:hover {
+  color: #d4afb9;
+  background-color: var(--color-primary);
+}
+
+footer {
+  padding: 0 1rem;
+  overflow: hidden;
+  position: sticky;
+  margin-top: auto;
+  margin-bottom: 0;
+  height: 60em;
+  width: 100%;
+  background-color: var(--color-accent);
+  text-align: center;
+}
