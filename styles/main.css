@@ -100,10 +100,19 @@ header {
   padding: 0 1rem;
 }
 .hero {
-  height: 851px;
   position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url(../images/hero-switzerland-800px.jpg);
 }
 .hero::before {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.64);
+  color: white;
+  align-items: center;
   content: "";
   position: absolute;
   inset: 0;
