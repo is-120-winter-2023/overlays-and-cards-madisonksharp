@@ -168,6 +168,7 @@ h3 {
 
 p {
   margin-bottom: 1.5rem;
+  color: var(--color-font);
 }
 article,
 aside {
@@ -210,10 +211,20 @@ a[href]:hover {
 .cards {
   display: flex;
   margin: 0 1rem;
-  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card {
+  flex: 1 1 0;
+  padding: 0.5rem;
+  box-shadow: 1px 2px 6px 0 rgba(0, 0, 0, 0.15);
   transition: 0.3s;
 }
 
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card:hover p {
+  color: var(--color-accent);
+}
 footer {
   padding: 0 1rem;
   overflow: hidden;
